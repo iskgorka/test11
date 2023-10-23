@@ -4,6 +4,38 @@ public class Collections {
 }
 
 /*
+Presentation example 1
+        class ListDemo {
+            public static void main(String[] args) {
+                ArrayList<Integer> list = new ArrayList<>();
+                ArrayList<Integer> list1 = new ArrayList<>();
+
+                list.add(1);
+                list.add(1,10);
+                list.add(2,7);
+                System.out.println(list);
+                list.remove(0);
+                System.out.println(list);
+                System.out.println(list.isEmpty());
+                System.out.println(list1.isEmpty());
+                System.out.println(list.size());
+                System.out.println(list1.size());
+                System.out.println(list.contains(7));
+                list.add(9);
+                System.out.println(list.get(1));
+                list1.add(14);
+                list1.add(2);
+                list1.add(6);
+                list1.add(80);
+                list1.add(6);
+                System.out.println(list1);
+                System.out.println(list1.indexOf(6));
+                System.out.println(list1.lastIndexOf(6));
+                list1.set(1,66);
+                System.out.println(list1);
+            }
+        }
+
 Collection example 1
         //Продемонстрировать применение класса ArrayList
         class ArrayListDemo {
