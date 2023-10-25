@@ -36,6 +36,113 @@ Presentation example 1
             }
         }
 
+Presentation example 2
+        class SetDemo {
+            public static void main(String[] args) {
+                Set<Integer> set = new HashSet<>();
+                set.add(8);
+                set.add(14);
+                set.add(32);
+                set.add(90);
+                set.add(90);
+                for (Integer i : set) System.out.print(i + ",");
+            }
+        }
+
+Presentation example 3
+        class QueueDemo {
+            public static void main(String[] args) {
+                Queue<Integer> queue = new ArrayDeque<>();
+                queue.add(10);
+                queue.add(7);
+                queue.add(11);
+                queue.add(11);
+                queue.offer(6);
+                //queue.remove(); //removes first element
+                for (Integer i : queue) {
+                    System.out.println(i);
+                }
+                //System.out.println(queue.element()); //first element
+                System.out.println(queue.poll());
+                System.out.println(queue.peek());
+
+                System.out.println(queue.offer(10)); //true
+                System.out.println(queue.offer(4)); //true
+                System.out.println(queue.peek()); //10
+                System.out.println(queue.poll()); //10
+                System.out.println(queue.poll()); //4
+                System.out.println(queue.peek()); //null
+            }
+        }
+
+Presentation example 4
+        class MapDemo {
+            public static void main(String[] args) {
+                Map<String, String> map = new HashMap<>();
+                map.put("koala", "bamboo");
+                map.put("lion", "meat");
+                map.put("giraffe", "leaf");
+                //map.clear();
+                System.out.println("The map is empty: " + map.isEmpty());
+                String food = map.get("koala"); //bamboo
+                map.put("aaa", "zzz");
+                map.remove("lion");
+                for (String key : map.keySet()) System.out.println(key);
+                System.out.println("The koala eats: " + map.get("koala"));
+                System.out.println("The map size is: " + map.size());
+                System.out.println(map.containsValue("leaf"));
+                System.out.println(map.containsValue("lion"));
+                System.out.println(map.keySet());
+                System.out.println(map.values());
+            }
+        }
+
+Presentation example 5
+        class ArrayListDemo {
+            public static void main(String[] args) {
+                //List<String> birds = new ArrayList<>();
+                //birds.add("hawk");
+                //System.out.println(birds);
+                //birds.set(0, "robin");
+                //System.out.println(birds);
+                //birds.set(1, "sparrow"); // IndexOutOfBoundsException
+
+                //ArrayList list = new ArrayList();
+                //list.add("halk");
+                //list.add(true);
+                //list.add(2.3);
+                //System.out.println(list);
+
+                List<String> one = new ArrayList<>();
+                List<String> two = new ArrayList<>();
+                System.out.println(one.equals(two));
+                one.add("1");
+                System.out.println(one.equals(two));
+                two.add("1");
+                System.out.println(one.equals(two));
+                one.add("2");
+                two.set(0, "2");
+                System.out.println(one.equals(two));
+            }
+        }
+
+Presentation example 6
+        class ConvertingDemo {
+            public static void main(String[] args) {
+                List<String> list = new ArrayList<>();
+                list.add("hawk");
+                list.add("robin");
+                Object[] objectArray = list.toArray();
+                System.out.println(objectArray.length); //2
+                String[] stringArray = list.toArray(new String[0]);
+                System.out.println(stringArray.length);
+
+                String[] array = {"Hawk", "Robin", "Sparrow"};
+                List<String> list1 = Arrays.asList(array);
+                System.out.println(list1.size());
+            }
+        }
+
 Collection example 1
         //Продемонстрировать применение класса ArrayList
         class ArrayListDemo {
